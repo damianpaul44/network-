@@ -1,0 +1,138 @@
+
+:root{
+--coffee:#3b2a1a;
+--gold:#d4af37;
+--white:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(rgba(59,42,26,0.85),rgba(59,42,26,0.85)),
+url('https://images.unsplash.com/photo-1492724441997-5dc865305da7');
+background-size:cover;
+background-attachment:fixed;
+color:var(--white);
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+width:100%;
+background:var(--coffee);
+padding:15px;
+text-align:center;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.5);
+}
+
+nav a{
+color:var(--white);
+margin:0 20px;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--gold);
+}
+
+/* SECTION */
+section{
+padding:120px 20px;
+min-height:100vh;
+text-align:center;
+animation:fadeIn 1.5s ease-in;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+}
+
+h1,h2,h3{
+color:var(--gold);
+margin-bottom:20px;
+}
+
+p{
+line-height:1.8;
+margin-bottom:15px;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:var(--gold);
+color:var(--coffee);
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+transition:.3s;
+margin-top:20px;
+}
+
+.btn:hover{
+background:var(--white);
+transform:scale(1.05);
+}
+
+/* ABOUT IMAGE */
+.about-img{
+width:250px;
+height:250px;
+object-fit:cover;
+border-radius:50%;
+border:5px solid var(--gold);
+margin-bottom:20px;
+}
+
+/* PROJECT CARD */
+.project-card{
+background:rgba(255,255,255,0.1);
+padding:20px;
+border-radius:15px;
+margin:20px;
+transition:.4s;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+background:rgba(212,175,55,0.2);
+}
+
+/* CONTACT */
+.contact a{
+color:var(--gold);
+text-decoration:none;
+}
+
+.contact a:hover{
+text-decoration:underline;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+nav a{
+display:block;
+margin:10px 0;
+}
+.about-img{
+width:180px;
+height:180px;
+}
+}
